@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": ["esnext"],
+    "removeComments": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "outDir": "lib",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "sourceMap": true,
+    "target": "es2019"
+  },
+  "include": ["./**/*.ts", "webpack.config.js"],
+  "exclude": [
+    "node_modules/**/*",
+    ".serverless/**/*",
+    ".webpack/**/*",
+    "_warmup/**/*",
+    ".vscode/**/*"
+  ]
+}

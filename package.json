@@ -1,0 +1,38 @@
+{
+  "name": "serverless-contact-to-email",
+  "version": "1.0.0",
+  "description": "Sample API implementation for transferring contact form data with Serverless Framework",
+  "author": "Tadao Iseki <saitoeku3@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "serverless offline start",
+    "deploy": "serverless deploy",
+    "format": "eslint --fix \"src/**/*.{ts,tsx}\"",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
+    "drop": "serverless remove"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.652.0",
+    "source-map-support": "^0.5.10"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/node": "^13.11.0",
+    "@types/webpack": "^4.41.10",
+    "@types/webpack-node-externals": "^1.7.1",
+    "@typescript-eslint/eslint-plugin": "^2.26.0",
+    "@typescript-eslint/parser": "^2.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "prettier": "^2.0.2",
+    "serverless": "^1.67.0",
+    "serverless-offline": "^6.1.3",
+    "serverless-webpack": "^5.2.0",
+    "ts-loader": "^6.2.2",
+    "ts-node": "^8.8.1",
+    "typescript": "^3.8.3",
+    "webpack": "^4.29.0",
+    "webpack-node-externals": "^1.7.2"
+  }
+}

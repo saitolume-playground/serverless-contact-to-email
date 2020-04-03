@@ -1,0 +1,38 @@
+service: serverless-contact-to-email
+
+custom:
+  defaultStage: dev
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+
+plugins:
+  - serverless-offline
+  - serverless-webpack
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: ${opt:stage, self:custom.defaultStage}
+  region: us-west-2
+  profile: serverless-contact-to-email
+  apiGateway:
+    minimumCompressionSize: 1024 # Enable gzip compression for responses > 1 KB
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - ses:SendEmail
+      Resource:
+        - '*'
+
+functions:
+  send:
+    handler: src/index.send
+    environment:
+      EMAIL: ${env:EMAIL}
+    events:
+      - http:
+          method: post
+          path: send
