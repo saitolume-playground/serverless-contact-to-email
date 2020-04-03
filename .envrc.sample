@@ -1,1 +1,2 @@
-export EMAIL=test@example.com
+export SES_EMAIL=ses-email@example.com
+export YOUR_EMAIL=your-email@example.com

@@ -16,7 +16,7 @@ export const send: APIGatewayProxyHandler = async (event): Promise<APIGatewayPro
 
   const params: AWS.SES.SendEmailRequest = {
     Destination: {
-      ToAddresses: [email],
+      ToAddresses: [process.env.YOUR_EMAIL || ''],
     },
     Message: {
       Body: {
@@ -30,7 +30,7 @@ export const send: APIGatewayProxyHandler = async (event): Promise<APIGatewayPro
         Charset: 'utf-8',
       },
     },
-    Source: process.env.EMAIL || '',
+    Source: process.env.SES_EMAIL || '',
   }
 
   try {

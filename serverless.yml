@@ -31,7 +31,8 @@ functions:
   send:
     handler: src/index.send
     environment:
-      EMAIL: ${env:EMAIL}
+      SES_EMAIL: ${env:SES_EMAIL}
+      YOUR_EMAIL: ${env:YOUR_EMAIL}
     events:
       - http:
           method: post
