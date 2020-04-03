@@ -6,7 +6,7 @@ Sample API implementation for transferring contact form data with Serverless Fra
 
 - Node.js 12.x.x
 - AWS account
-- [Verifying your email address](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/setting-up-email.html)
+- [Verified email address for SES](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/setting-up-email.html)
 
 
 ## API
@@ -31,6 +31,11 @@ content-type: application/json; charset=utf-8
 ```
 
 ## Environment variables
+
+Recommend to use [direnv](https://github.com/direnv/direnv).
+
+- SES_EMAIL: Email address for SES
+- YOUR_EMAIL: Email address to receive
 
 ## Development
 
